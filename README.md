@@ -63,13 +63,13 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Vet clinic database] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> In this project, I tried to use a relational database to create the initial data structure for a vet clinic. I also create a table to store animals' information, insert some data into it, and query it.
 
-**[your_project__name]** is a...
+**[your_project__name]** is Vet clinic database
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a name="built-with"> Postgres  git git-flow  github</a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -78,14 +78,14 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://reactjs.org/">local host</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://expressjs.com/">Postgres server</a></li>
   </ul>
 </details>
 
