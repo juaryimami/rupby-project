@@ -33,5 +33,6 @@ COMMIT TRANSACTION;
 SELECT COUNT(id) from animals;
 SELECT COUNT(id) from animals where escape_attempts =0;
 SELECT AVG(weight_kg) from animals;
+SELECT species, max(weight_kg), min(weight_kg) from animals group by species;
 SELECT neutered, max(escape_attempts) from animals group by neutered;
 select species, avg(escape_attempts) from animals where date_of_birth >='1990-01-01' and date_of_birth <='2000-12-31' group by species;
