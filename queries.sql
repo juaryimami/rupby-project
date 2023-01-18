@@ -14,8 +14,8 @@ ALTER TABLE animals ALTER COLUMN species SET DEFAULT 'unspecified';
 ROLLBACK TRANSACTION;
 -- TRANSACTION TWO
 BEGIN TRANSACTION;
-UPDATE animals SET species = 'digimon' WHERE name like '%mon';
-UPDATE animals SET species = 'digimon' WHERE name like '';
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species = 'digimon' WHERE name LIKE '';
 COMMIT TRANSACTION;
 -- TRANSACTION THREE
 BEGIN TRANSACTION;
@@ -23,16 +23,16 @@ delete from animals;
 ROLLBACK TRANSACTION;
 -- TRANSACTION FOUR
 BEGIN TRANSACTION
-delete from animals where date_of_birth >='2022-01-01';
+DELETE FROM animals WHERE date_of_birth >='2022-01-01';
 SAVEPOINT SP1;
-update animals set weight_kg = weight_kg *-1;
+update animals SET weight_kg = weight_kg *-1;
 ROLLBACK TO SP1;
-update animals set weight_kg = weight_kg *-1;
+UPDATE animals SET weight_kg = weight_kg *-1;
 COMMIT TRANSACTION;
 -- AGGREGATE SECTION
-SELECT COUNT(id) from animals;
-SELECT COUNT(id) from animals where escape_attempts =0;
-SELECT AVG(weight_kg) from animals;
-SELECT species, max(weight_kg), min(weight_kg) from animals group by species;
-SELECT neutered, max(escape_attempts) from animals group by neutered;
-select species, avg(escape_attempts) from animals where date_of_birth >='1990-01-01' and date_of_birth <='2000-12-31' group by species;
+SELECT COUNT(id) FROM animals;
+SELECT COUNT(id) FROM animals WHERE escape_attempts =0;
+SELECT AVG(weight_kg) FROM animals;
+SELECT species, max(weight_kg), min(weight_kg) FROM animals GROUP BY species;
+SELECT neutered, max(escape_attempts) FROM animals GROUP BY neutered;
+select species, avg(escape_attempts) FROM animals WHERE date_of_birth >='1990-01-01' AND date_of_birth <='2000-12-31' group by species;
