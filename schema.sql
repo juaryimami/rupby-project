@@ -26,3 +26,17 @@ ALTER TABLE animals ADD CONSTRAINT fk_spe
 FOREIGN KEY (species_id)REFERENCES species(id);
 ALTER TABLE animals ADD column owner_id serial;
 ALTER TABLE animals ADD CONSTRAINT fk_own FOREIGN KEY (owner_id)REFERENCES owners(id);
+
+-- SCHEMA FOR VETS TABLE
+CREATE TABLE vets(id SERIAL PRIMARY KEY, name VARCHAR(50), age INTEGER, date_of_graduation date);
+
+-- SCHEMA FOR SPECIALIZATION TABLE
+CREATE TABLE specializations(id SERIAL PRIMARY KEY, 
+vets_id INTEGER REFERENCES vets(id), 
+species_id INTEGER REFERENCES species(id));
+
+-- SCHEMA FOR VISITS TABLE
+CREATE TABLE visits(id serial primary key, 
+vets_id integer REFERENCES vets(id), 
+animal_id integer REFERENCES animals(id),
+date_of_visit date);
