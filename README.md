@@ -102,9 +102,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[ADD FOREIGN AND PROMARY KEY]**
+- **[INSERT INTO TABELS]**
+- **[USE AGGREGATES]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,6 +130,10 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+1 install postges in your local machine
+
+2 well funcitioning vs code editor
+
 <!--
 Example command:
 
@@ -141,6 +145,11 @@ Example command:
 ### Setup
 
 Clone this repository to your desired folder:
+
+
+   git clone  https://github.com/juaryimami/rupby-project.git
+
+
 
 <!--
 Example commands:
@@ -178,7 +187,7 @@ Example command:
 
 ### Run tests
 
-To run tests, run the following command:
+To run tests, run the sql files to your database
 
 <!--
 Example command:
@@ -208,17 +217,10 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Juhar Yimer**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@juaryimami](https://github.com/juaryimami)
+- LinkedIn: [juhar yimer](https://linkedin.com/in/juhar-yimer)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -228,9 +230,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[ADD FOREIGN AND PROMARY KEY]**
+- [ ] **[INSERT INTO TABELS]**
+- [ ] **[USE AGGREGATES]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -240,7 +242,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page]( https://github.com/juaryimami/rupby-project/issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
