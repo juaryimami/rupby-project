@@ -38,6 +38,10 @@ SELECT neutered, max(escape_attempts) FROM animals GROUP BY neutered;
 SELECT species, avg(escape_attempts) FROM animals WHERE date_of_birth >='1990-01-01'
 AND date_of_birth <='2000-12-31' group by species;
 
+-- inserting species to our animals table
+update animals SET species_id=2 where name like '%mon';
+update animals SET species_id=1 where name not like '%mon';
+
 -- QUERIES FROM FOREIGN AND PROMAY KEY LESSONS
 select o.full_name,a.name,a.escape_attempts,a.neutered,a.weight_kg
 from owners o,animals a where o.id=a.owner_id and o.full_name='Melody Pond';
