@@ -131,6 +131,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 1 install postges in your local machine
+
 2 well funcitioning vs code editor
 
 <!--
