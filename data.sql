@@ -41,7 +41,10 @@ INSERT INTO vets(name,age,date_of_graduation) values('Stephanie Mendez',64,'1981
 insert INTO vets(name,age,date_of_graduation) values('Jack Harkness',38,'2008-06-08');
 
 -- insertion to specialites table
-
+insert into specializations(vets_id,species_id)values(4,2);
+insert into specializations(vets_id,species_id)values(1,1);
+insert into specializations(vets_id,species_id)values(3,1);
+insert into specializations(vets_id,species_id)values(3,2);
 
 -- insertion to visits table
 insert into visits(vets_id,animal_id,date_of_visit) values(1,1,'2020-05-24');
