@@ -30,6 +30,8 @@ INSERT INTO owners(full_name,age) VALUES('Bob',45);
 INSERT INTO owners(full_name,age) VALUES('Melody Pond',77);
 INSERT INTO  owners(full_name,age) VALUES('Dean Whinchester',14);
 INSERT INTO owners(full_name,age) VALUES('Jodie Whittaker',38);
+-- for performance oudit
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
 -- INSERTION TO SPECIES TABLE
 INSERT INTO species(name) values ('Pokemon');
 INSERT INTO species(name) VALUES ('Digimon');
@@ -66,3 +68,7 @@ insert into visits(vets_id,animal_id,date_of_visit) values(2,9,'2020-08-03');
 insert into visits(vets_id,animal_id,date_of_visit) values(3,9,'2020-05-24');
 insert into visits(vets_id,animal_id,date_of_visit) values(3,10,'2020-05-24');
 insert into visits(vets_id,animal_id,date_of_visit) values(1,10,'2021-01-11');
+-- for performance oudit
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM 
+(SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_id, 
+generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;

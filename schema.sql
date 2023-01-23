@@ -40,3 +40,8 @@ CREATE TABLE visits(id serial primary key,
 vets_id integer REFERENCES vets(id), 
 animal_id integer REFERENCES animals(id),
 date_of_visit date);
+
+-- performance audit
+CREATE INDEX owners_email_idx ON owners(email);
+CREATE INDEX visits_animal_id_idx ON visits(animal_id);
+CREATE INDEX visits_vets_id_idx ON visits(vets_id);
